@@ -1,0 +1,109 @@
+{
+	"info": {
+		"_postman_id": "9651da46-1e56-4e5f-b32e-ef923b014741",
+		"name": "mon-domaine-postman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "mon-domaine-gateway-api",
+			"item": []
+		},
+		{
+			"name": "mon-domaine-metier",
+			"item": [
+				{
+					"name": "refresh-config",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/actuator/refresh",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"actuator",
+								"refresh"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "check-healty",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/service/metier/mon-domaine",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"service",
+								"metier",
+								"mon-domaine"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "encrypt-config",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "test"
+						},
+						"url": {
+							"raw": "http://localhost:8888/encrypt",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"encrypt"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "decrypt-config",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "13f627fd0ffd873e282b2687e5300272794d78bf491f23c6da3250176db9c655"
+						},
+						"url": {
+							"raw": "http://localhost:8888/decrypt",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"decrypt"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "mon-domaine-interaction",
+			"item": []
+		}
+	]
+}
